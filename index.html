@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- 🔒 SEGURANÇA -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; frame-src https://www.google.com;">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Vaga — Reforço Quero Aprender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="badge">REFORÇO ESCOLAR</div>
+    <h1 class="brand">QUERO <span>APRENDER</span></h1>
+  </header>
+
+  <main class="hero">
+    <!-- Coluna esquerda -->
+    <div class="hero-left">
+      <div class="callout">
+        <div class="pill white">MATRÍCULAS</div>
+        <div class="pill yellow">ABERTAS</div>
+      </div>
+
+      <h2 class="headline">Do 1º ao 6º Ano</h2>
+      <p class="subhead">Vagas limitadas <strong>(apenas 10 vagas)</strong></p>
+
+      <div class="info-cards">
+        <div class="card"><strong>Vagas:</strong> Limitadas</div>
+        <div class="card"><strong>Contato:</strong> (79) 99121-1159</div>
+      </div>
+
+      <div class="form-wrap">
+        <form id="matriculaForm" novalidate>
+          <label>Nome do aluno<span class="req">*</span></label>
+          <input id="nomeAluno" type="text" required>
+
+          <label>Série/Ano do aluno<span class="req">*</span></label>
+          <select id="serie" required>
+            <option value="">Selecione...</option>
+            <option>1º Ano</option>
+            <option>2º Ano</option>
+            <option>3º Ano</option>
+            <option>4º Ano</option>
+            <option>5º Ano</option>
+            <option>6º Ano</option>
+          </select>
+
+          <label>Turno<span class="req">*</span></label>
+          <select id="turno" required>
+            <option value="">Selecione...</option>
+            <option>Manhã (9:30 às 11:30)</option>
+            <option>Tarde (15:30 às 17:15)</option>
+          </select>
+
+          <label>Nome do responsável<span class="req">*</span></label>
+          <input id="responsavel" type="text" required>
+
+          <label>Telefone para contato<span class="req">*</span></label>
+          <input id="telefone" type="tel" inputmode="numeric" placeholder="99999-9999" required>
+
+          <label>Observações</label>
+          <textarea id="obs" rows="3"></textarea>
+
+          <div class="regras">
+            <p>• Preencha o formulário para reserva de vagas.</p>
+            <p>• Em caso de desistência, o valor não será reembolsado.</p>
+            <p>• O valor da reserva garante a vaga e será abatido na primeira mensalidade.</p>
+          </div>
+
+          <button id="btnEnviar" type="submit">Enviar e falar no WhatsApp</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Coluna direita -->
+    <aside class="hero-right">
+      <img src="imagens/crianças.jpeg" alt="Criança com mochila" class="hero-image">
+      <svg class="star" viewBox="0 0 24 24">
+        <path fill="#fff" d="M12 17.27L18.18 21l-1.64-7L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.76L5.82 21z" />
+      </svg>
+      <svg class="pencil" viewBox="0 0 24 24">
+        <path fill="#ffd54f"
+          d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+      </svg>
+    </aside>
+  </main>
+
+  <section class="mapa">
+    <h2>Localização</h2>
+    <iframe width="100%" height="320" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Rua%20C%204,%20104%20Esquina%20com%20rua%20I%204&output=embed">
+    </iframe>
+  </section>
+
+  <footer class="footer">
+    <p>Endereço: Rua C 4, 104 — Esquina com Rua I 4</p>
+    <p>© Reforço Escolar Quero Aprender — Matrículas 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

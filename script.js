@@ -1,18 +1,12 @@
-// =============================
-// CONFIG
-// =============================
-const WHATSAPP_NUMBER = "557991211159"; // insira o número real
 
-// =============================
-// ESCAPE SEGURO (ANTI-XSS)
-// =============================
+const WHATSAPP_NUMBER = "557991211159"; 
+
+
 function escapeText(str) {
   return String(str || "").replace(/[*_`~<>]/g, "");
 }
 
-// =============================
-// CRIPTOGRAFIA XOR + BASE64
-// =============================
+
 const KEY = 73;
 
 function shuffle(str) {
@@ -36,9 +30,7 @@ function decrypt(enc) {
   return result;
 }
 
-// =============================
-// MÁSCARA DE TELEFONE
-// =============================
+
 const telInput = document.getElementById("telefone");
 
 telInput.addEventListener("input", () => {
@@ -48,15 +40,11 @@ telInput.addEventListener("input", () => {
   else telInput.value = v;
 });
 
-// =============================
-// ENVIO
-// =============================
 document.getElementById("matriculaForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const btn = document.getElementById("btnEnviar");
   btn.disabled = true;
 
-  // coleta + sanitização
   const responsavel = escapeText(document.getElementById("responsavel").value.trim());
   const aluno = escapeText(document.getElementById("nomeAluno").value.trim());
   const serieTxt = escapeText(document.getElementById("serie").value.trim());

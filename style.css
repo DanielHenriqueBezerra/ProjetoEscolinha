@@ -154,8 +154,6 @@ textarea{ resize:vertical; min-height:70px }
 .star{ top:8px; right:40px; fill:#fff }
 .pencil{ bottom:18px; right:8px; transform:rotate(-10deg) }
 
-/* mapa */
-.mapa{ padding:30px 15px; text-align:center; }
 
 /* footer */
 .footer{ text-align:center; color:#fff; margin:26px 0 40px }
